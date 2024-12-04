@@ -1,0 +1,143 @@
+/* General Styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .header.dark-mode {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav {
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    position: relative;
+    margin: 0 10px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #0073e6;
+  }
+  
+  .search-bar {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Dropdown Menu */
+  .dropdown .submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 10px 0;
+    list-style: none;
+    display: none;
+    z-index: 1000;
+  }
+  
+  .dropdown:hover .submenu,
+  .dropdown .submenu.open {
+    display: block;
+  }
+  
+  .submenu li {
+    padding: 5px 20px;
+  }
+  
+  .submenu li a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .submenu li a:hover {
+    color: #0073e6;
+    background-color: #f0f0f0;
+  }
+  
+  /* Hamburger Menu */
+  .hamburger {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .nav.open {
+    transform: translateX(0);
+  }
+  
+  /* Theme Switcher */
+  .theme-switcher {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .nav {
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background-color: inherit;
+      flex-direction: column;
+      transform: translateX(100%);
+      width: 200px;
+      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .nav-links li {
+      margin: 10px 0;
+    }
+  }
+  
